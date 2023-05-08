@@ -5,7 +5,9 @@
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book program");
-            AddressBookMain.AddNewDetails();
+            AddressBookMain addressBook=new AddressBookMain();
+            addressBook.AddNewDetails();
+            addressBook.EditContact();
             
         }
     }
