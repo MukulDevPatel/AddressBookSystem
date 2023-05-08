@@ -1,0 +1,15 @@
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.exe
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.deps.json
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.runtimeconfig.json
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.dll
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.pdb
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.AssemblyReference.cache
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfoInputs.cache
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfo.cs
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.CoreCompileInputs.cache
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.dll
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\refint\AddressBookSystem.dll
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.pdb
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.genruntimeconfig.cache
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\ref\AddressBookSystem.dll
