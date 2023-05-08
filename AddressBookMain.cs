@@ -9,27 +9,26 @@ namespace AddressBookSystem
     public class AddressBookMain
     {
         Contact contact = new Contact();
+        List<Contact> addressBook = new List<Contact>();
         public void AddNewDetails()
         {
-            Contact contact = new Contact();
-            Console.WriteLine("Enter first name");
+            Console.Write("Enter first name: ");
             contact.FirstName = Console.ReadLine();
-            Console.WriteLine("Enter last name");
+            Console.Write("Enter last name: ");
             contact.LastName = Console.ReadLine();
-            Console.WriteLine("Enter Address");
+            Console.Write("Enter Address: ");
             contact.Address = Console.ReadLine();
-            Console.WriteLine("Enter City");
+            Console.Write("Enter City: ");
             contact.City = Console.ReadLine();
-            Console.WriteLine("Enter State");
+            Console.Write("Enter State: ");
             contact.State = Console.ReadLine();
-            Console.WriteLine("Enter ZIP");
+            Console.Write("Enter ZIP: ");
             contact.Zip = Console.ReadLine();
-            Console.WriteLine("Enter Phone Number");
+            Console.Write("Enter Phone Number: ");
             contact.PhoneNumber = Console.ReadLine();
-            Console.WriteLine("Enter Email");
+            Console.Write("Enter Email: ");
             contact.Email = Console.ReadLine();
 
-            Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
         }
         public void EditContact()
         {
@@ -62,6 +61,27 @@ namespace AddressBookSystem
                     contact.Email = Console.ReadLine();
                     break;
             }
+        }
+        public void DeleteContact()
+        {
+            Console.Write("Enter a name for delete contact: ");
+            string name = Console.ReadLine();
+            foreach (var data in addressBook)
+            {
+                if (data.FirstName == name)
+                {
+                    addressBook.Remove(data);
+                }
+            }
+        }
+        public void Display()
+        {
+            foreach (var data in addressBook)
+            {
+                //Console.WriteLine(data.FirstName);
+                Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+            }
+            //Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
         }
     }
 }
