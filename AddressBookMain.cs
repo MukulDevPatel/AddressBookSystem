@@ -28,7 +28,7 @@ namespace AddressBookSystem
             contact.PhoneNumber = Console.ReadLine();
             Console.Write("Enter Email: ");
             contact.Email = Console.ReadLine();
-            Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+            addressBook.Add(contact);
 
         }
         public void EditContact()
