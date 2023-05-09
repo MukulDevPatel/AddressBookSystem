@@ -28,6 +28,7 @@ namespace AddressBookSystem
             contact.PhoneNumber = Console.ReadLine();
             Console.Write("Enter Email: ");
             contact.Email = Console.ReadLine();
+            Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
 
         }
         public void EditContact()
@@ -78,10 +79,25 @@ namespace AddressBookSystem
         {
             foreach (var data in addressBook)
             {
-                //Console.WriteLine(data.FirstName);
+
                 Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
             }
-            //Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+
+        }
+        public void AddNewPersonDetails()
+        {
+            Console.WriteLine("Add multiple data: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (num ==1)
+            {
+                AddressBookMain address = new AddressBookMain();
+                address.AddNewDetails();
+                addressBook.Add(contact);
+            }
+            else
+            {
+                Console.WriteLine("No add another details");
+            }
         }
     }
 }
