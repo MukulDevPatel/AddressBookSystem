@@ -9,7 +9,7 @@ namespace AddressBookSystem
     public class AddressBookMain
     {
         Contact contact = new Contact();
-        Dictionary<string, List<Contact>> addressBook = new Dictionary<string, List<Contact>>();
+        List<Contact>> addressBook = new List<Contact>();
         public void AddNewDetails()
         {
             Console.Write("Enter first name: ");
@@ -86,17 +86,32 @@ namespace AddressBookSystem
         }
         public void AddNewPersonDetails()
         {
-            Console.WriteLine("Add multiple data: ");
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num > 0)
+             Dictionary<string,List<Contact>> addressBooks = new Dictionary<string,List<Contact>>();
+            while (true)
             {
-                AddressBookMain address = new AddressBookMain();
-                address.AddNewDetails();
-
-            }
-            else
-            {
-                Console.WriteLine("No add another person details");
+                Console.WriteLine("Enter address book name or type 'exit' ");
+                string bookName = Console.ReadLine();
+                
+                if (bookName.ToLower() == "exit")
+                { break; }
+                
+                if (addressBooks.ContainsKey(bookName))
+                {
+                    Console.WriteLine("{0} Address Book is exist",bookName);
+                }
+                else { addressBooks.Add(bookName, addressBook);
+                    Console.WriteLine("{0} Address book added.\n",bookName);
+                    bool flag = true;
+                    while (flag) 
+                    { 
+                        Console.WriteLine("1. Enter person's details \n2. Type 'exit' ");
+                        AddressBookMain address = new AddressBookMain();
+                        address.AddContact();
+                        address.Display();
+                        flag = false;
+                        break;
+                    }
+                }
             }
         }
     }
