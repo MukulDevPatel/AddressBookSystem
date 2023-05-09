@@ -8,7 +8,7 @@
             AddressBookMain addressBook=new AddressBookMain();
             addressBook.AddNewDetails();
             addressBook.AddNewPersonDetails();
-            
+
         }
     }
 }

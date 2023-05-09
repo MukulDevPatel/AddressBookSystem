@@ -9,7 +9,7 @@ namespace AddressBookSystem
     public class AddressBookMain
     {
         Contact contact = new Contact();
-        List<Contact> addressBook = new List<Contact>();
+        Dictionary<string, List<Contact>> addressBook = new Dictionary<string, List<Contact>>();
         public void AddNewDetails()
         {
             Console.Write("Enter first name: ");
@@ -69,9 +69,9 @@ namespace AddressBookSystem
             string name = Console.ReadLine();
             foreach (var data in addressBook)
             {
-                if (data.FirstName == name)
+               if (data.Equals(name))
                 {
-                    addressBook.Remove(data);
+                    addressBook.Remove(name);
                 }
             }
         }
@@ -88,15 +88,15 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Add multiple data: ");
             int num = Convert.ToInt32(Console.ReadLine());
-            if (num ==1)
+            if (num > 0)
             {
                 AddressBookMain address = new AddressBookMain();
                 address.AddNewDetails();
-                addressBook.Add(contact);
+
             }
             else
             {
-                Console.WriteLine("No add another details");
+                Console.WriteLine("No add another person details");
             }
         }
     }
