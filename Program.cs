@@ -12,8 +12,8 @@
             Contact contact8 = new Contact() { FirstName = "Vinay", LastName = "Pathak", Address = "section B3", City = "City2", Email = "ivan@gmail.com", PhoneNumber = "6254354513", State = "Kanada", Zip = "425125" };
             Contact contact3 = new Contact() { FirstName = "Daniel", LastName = "Johson", Address = "section C", City = "City2", Email = "daniel@gmail.com", PhoneNumber = "6254654813", State = "Brazil", Zip = "426136" };
             Contact contact4 = new Contact() { FirstName = "Jaya", LastName = "Sahay", Address = "section D", City = "City3", Email = "jaya@gmail.com", PhoneNumber = "6254554813", State = "Maharashtra", Zip = "424136" };
-            Contact contact5 = new Contact() { FirstName = "Emma", LastName = "Stone", Address = "section E", City = "City14", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" };
-            Contact contact6 = new Contact() { FirstName = "Harry", LastName = "Stone", Address = "section E", City = "City14", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" };
+            Contact contact5 = new Contact() { FirstName = "Emma", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" };
+            Contact contact6 = new Contact() { FirstName = "Harry", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" };
 
             Contact contact1 = new Contact() { FirstName = "Jay", LastName = "Kumar", Address = "section A", City = "Vijay Nager", Email = "vikra@gmail.com", PhoneNumber = "6254354813", State = "Mp", Zip = "425136" };
             Contact contact7 = new Contact() { FirstName = "Saurabh", LastName = "Pratt", Address = "section B", City = "City1", Email = "chris@gmail.com", PhoneNumber = "6254354513", State = "NY", Zip = "425135" };
@@ -33,23 +33,17 @@
             addressBook.searchPersonByName("Emma");
             addressBook.searchPersonByName("Stone");
 
-            //Search by State
-            var SearchInState = new List<Contact>();
-            SearchInState.AddRange(addressBook.searchPersonByState("USA"));
-            Console.WriteLine("State: USA");
-            foreach (var people in SearchInState)
-            {
-                Console.WriteLine($"Name:{people.FirstName}, State:{people.State}");
-            }
-            
-            //Search by City
-            var SearchInCity = new List<Contact>();
-            SearchInCity.AddRange(addressBook.searchPersonByCity("City2"));
-            Console.WriteLine("City: City2");
-            foreach (var people in SearchInCity)
-            {
-                Console.WriteLine($"Name:{people.FirstName}, City:{people.City}");
-            }
+            //Count by city
+            string city = "City3";
+            int countCity = addressBook.CountByCity(city);
+            Console.WriteLine($"Number of contact persons in {city}: {countCity}");
+
+            //Count by state
+            string state = "UK";
+            int countState = addressBook.CountByState(state);
+            Console.WriteLine($"Number of contact persons in {state}: {countState}");
+
+
         }
     }
 }
