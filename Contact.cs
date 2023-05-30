@@ -16,5 +16,17 @@ namespace AddressBookSystem
         public string Zip { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+
+        
+        //Override method for check duplicate address by name
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            Contact otherPerson = (Contact)obj;
+            return string.Equals(FirstName, otherPerson.FirstName, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }

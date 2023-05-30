@@ -3,116 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace AddressBookSystem
 {
     public class AddressBookMain
     {
-        Contact contact = new Contact();
-         List<Contact> addressBook = new List<Contact>();
-        public void AddNewDetails()
+        private List<Contact> people; 
+        public AddressBookMain()
         {
-            Console.Write("Enter first name: ");
-            contact.FirstName = Console.ReadLine();
-            Console.Write("Enter last name: ");
-            contact.LastName = Console.ReadLine();
-            Console.Write("Enter Address: ");
-            contact.Address = Console.ReadLine();
-            Console.Write("Enter City: ");
-            contact.City = Console.ReadLine();
-            Console.Write("Enter State: ");
-            contact.State = Console.ReadLine();
-            Console.Write("Enter ZIP: ");
-            contact.Zip = Console.ReadLine();
-            Console.Write("Enter Phone Number: ");
-            contact.PhoneNumber = Console.ReadLine();
-            Console.Write("Enter Email: ");
-            contact.Email = Console.ReadLine();
-            addressBook.Add(contact);
+            people = new List<Contact>();
         }
-        public void EditContact()
+
+        //Add new contacts and check duplicate if is it exist
+        public void addPerson(Contact contact)
         {
-            Console.WriteLine("Enter option to edit\n1. First Name\n2. Last Name\n3. Address\n4. City\n5. State\n6. ZIP\n7. Phone Number\n8. Email");
-            int option = Convert.ToInt32(Console.ReadLine());
-            switch (option)
+            if (!people.Contains(contact))
             {
-                case 1:
-                    contact.FirstName = Console.ReadLine();
-                    break;
-                case 2:
-                    contact.LastName = Console.ReadLine();
-                    break;
-                case 3:
-                    contact.Address = Console.ReadLine();
-                    break;
-                case 4:
-                    contact.City = Console.ReadLine();
-                    break;
-                case 5:
-                    contact.State = Console.ReadLine();
-                    break;
-                case 6:
-                    contact.Zip = Console.ReadLine();
-                    break;
-                case 7:
-                    contact.PhoneNumber = Console.ReadLine();
-                    break;
-                case 8:
-                    contact.Email = Console.ReadLine();
-                    break;
+                people.Add(contact);
+                Console.WriteLine("Add Successfully");
+            }
+            else
+            {
+                Console.WriteLine($"Duplicate entry deatails \nFirstName: {contact.FirstName}, LastName: {contact.LastName}, Address: {contact.Address}," +
+                    $" City: {contact.City}, State: {contact.State}, Zip: {contact.Zip}, PhoneNumber: {contact.PhoneNumber}, Email: {contact.Email}");
             }
         }
-        public void DeleteContact()
+
+        //Search person by their First name
+        public void searchPersonByName(string name)
         {
-            Console.Write("Enter a name for delete contact: ");
-            string name = Console.ReadLine();
-            foreach (var data in addressBook)
+            Contact getPerson = people.FirstOrDefault(p => p.FirstName == name);
+            if (getPerson != null)
             {
-               if (data.Equals(name))
-                {
-                    addressBook.Remove(data);
-                }
-            }
-        }
-        public void Display()
-        {
-            foreach (var data in addressBook)
+                Console.WriteLine($"Get the details of Person: {getPerson.FirstName}");
+            }else
             {
-
-                Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
-            }
-
-        }
-        public void AddNewPersonDetails()
-        {
-            Dictionary<string, List<Contact>> addressBooks = new Dictionary<string, List<Contact>>();
-            while (true)
-            {
-                Console.WriteLine("Enter address book name or type 'exit' ");
-                string bookName = Console.ReadLine();
-
-                if (bookName.ToLower() == "exit")
-                { break; }
-
-                if (addressBooks.ContainsKey(bookName))
-                {
-                    Console.WriteLine("{0} Address Book is exist", bookName);
-                }
-                else
-                {
-                    addressBooks.Add(bookName, addressBook);
-                    Console.WriteLine("{0} Address book added.\n", bookName);
-                    bool flag = true;
-                    while (flag)
-                    {
-                        Console.WriteLine("1. Enter person's details \n2. Type 'exit' ");
-                        AddressBookMain address = new AddressBookMain();
-                        address.AddNewDetails();
-                        address.Display();
-                        flag = false;
-                        break;
-                    }
-                }
+                Console.WriteLine("Person not found");
             }
         }
     }
