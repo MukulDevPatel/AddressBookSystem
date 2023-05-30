@@ -25,8 +25,10 @@ namespace AddressBookSystem
             {
                 return false;
             }
-            Contact otherPerson = (Contact)obj;
-            return string.Equals(FirstName, otherPerson.FirstName, StringComparison.OrdinalIgnoreCase);
+            //Contact otherPerson = (Contact)obj;
+            //return string.Equals(FirstName, otherPerson.FirstName, StringComparison.OrdinalIgnoreCase);
+            return FirstName.Equals(((Contact)obj).FirstName);
         }
+        
     }
 }
