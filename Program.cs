@@ -6,9 +6,9 @@
         {
             Console.WriteLine("Welcome to Address Book program");
             AddressBookMain addressBook=new AddressBookMain();
-            addressBook.AddNewDetails();
+            //addressBook.AddNewDetails();
             addressBook.AddNewPersonDetails();
-
+            //addressBook.Display();
         }
     }
 }
