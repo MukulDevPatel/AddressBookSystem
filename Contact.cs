@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    public class Contact
+    public class Contact : IComparable<Contact>
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -17,18 +17,15 @@ namespace AddressBookSystem
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
-        
-        //Override method for check duplicate address by name
-        public override bool Equals(object obj)
+        public int CompareTo(Contact other)
         {
-            if (obj == null || GetType() != obj.GetType())
-            {
-                return false;
-            }
-            //Contact otherPerson = (Contact)obj;
-            //return string.Equals(FirstName, otherPerson.FirstName, StringComparison.OrdinalIgnoreCase);
-            return FirstName.Equals(((Contact)obj).FirstName);
+            return FirstName.CompareTo(other.FirstName);
         }
-        
+
+        public override string ToString()
+        {
+            return $"First Name:{FirstName}, LastName: {LastName}, Address: {Address}, " +
+                $"City:{City}, State:{State}, Zip:{Zip}, PhoneNumber:{PhoneNumber}, Email:{Email}";
+        }
     }
 }
