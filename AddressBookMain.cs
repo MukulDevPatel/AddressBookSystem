@@ -12,22 +12,24 @@ namespace AddressBookSystem
 {
     public class AddressBookMain 
     {
-        public static void AddressBook()
+        public static void SortByCity(List<Contact> contacts)
         {
-            List<Contact> contacts = new List<Contact>();
+            contacts.Sort((person1, person2) => person1.City.CompareTo(person2.City));
+        }
 
-            contacts.Add(new Contact { FirstName = "Jay", LastName = "Kumar", Address = "section A", City = "Vijay Nager", Email = "vikra@gmail.com", PhoneNumber = "6254354813", State = "Mp", Zip = "425136" });
-            contacts.Add(new Contact { FirstName = "Aarav", LastName = "Pratt", Address = "section B2", City = "City5", Email = "ivan@gmail.com", PhoneNumber = "6254354513", State = "UK", Zip = "425125" });
-            contacts.Add(new Contact { FirstName = "Daniel", LastName = "Johson", Address = "section C", City = "City2", Email = "daniel@gmail.com", PhoneNumber = "6254654813", State = "Brazil", Zip = "426136" });
-            contacts.Add(new Contact { FirstName = "Jaya", LastName = "Sahay", Address = "section D", City = "City3", Email = "jaya@gmail.com", PhoneNumber = "6254554813", State = "Maharashtra", Zip = "424136" });
-            contacts.Add(new Contact { FirstName = "Emma", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" });
-            contacts.Add(new Contact { FirstName = "Harry", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" });
+        public static void SortByState(List<Contact> contacts)
+        {
+            contacts.Sort((person1, person2) => person1.State.CompareTo(person2.State));
+        }
 
-            //Sort address book by FirstName
-            contacts.Sort();
+        public static void SortByZip(List<Contact> contacts)
+        {
+            contacts.Sort((person1, person2) => person1.Zip.CompareTo(person2.Zip));
+        }
 
-            //Display the address book
-            foreach (var contact in contacts)
+        public static void PrintAddressBook(List<Contact> contacts)
+        {
+            foreach (Contact contact in contacts)
             {
                 Console.WriteLine(contact);
             }
@@ -44,14 +46,21 @@ namespace AddressBookSystem
             contacts.Add(new Contact { FirstName = "Emma", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" });
             contacts.Add(new Contact { FirstName = "Harry", LastName = "Stone", Address = "section E", City = "City4", Email = "emma@gmail.com", PhoneNumber = "6254354823", State = "USA", Zip = "425132" });
 
-            //Sorting by lambda method
-            contacts.Sort((person1, person2) => person1.FirstName.CompareTo(person2.FirstName));
+            //Sort by city
+            SortByCity(contacts);
+            Console.WriteLine("Sorted by city: ");
+            PrintAddressBook(contacts);
 
-            //Print 
-            foreach (var contact in contacts)
-            {
-                Console.WriteLine(contact);
-            }
+            //Sort by state
+            SortByState(contacts);
+            Console.WriteLine("\nSorted by state");
+            PrintAddressBook(contacts);
+
+            //Sort by zip
+            SortByZip(contacts);
+            Console.WriteLine("\nSorted by zip");
+            PrintAddressBook(contacts);
+
         }
     }
 }
