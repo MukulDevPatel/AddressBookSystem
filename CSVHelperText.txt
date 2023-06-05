@@ -1,7 +1,0 @@
-FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email
-Jay,Kumar,section A,Vijay Nager,Mp,425136,6254354813,vikra@gmail.com
-Aarav,Pratt,section B2,City5,UK,425125,6254354513,ivan@gmail.com
-Daniel,Johson,section C,City2,Brazil,426136,6254654813,daniel@gmail.com
-Jaya,Sahay,section D,City3,Maharashtra,424136,6254554813,jaya@gmail.com
-Emma,Stone,section E,City4,USA,425132,6254354823,emma@gmail.com
-Harry,Stone,section E,City4,USA,425132,6254354823,harry@gmail.com

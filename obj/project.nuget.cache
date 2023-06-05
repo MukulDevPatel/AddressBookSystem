@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sTayW+S6zBvImBoXpn7fLM0H0iPzIxx6xrAVF3H4k+C4Npy7y/kNvaLhmtaEa8d2rCgun/PA21kEGjXwPzzibg==",
+  "dgSpecHash": "r4tRFaIXZkkGSUvmWNmdMfik93uF3cEFFb4ltigx/JzAQ4R/IptB0h+euAEB4lCJcU4qAe3Hq4xOC5I7gnUcHA==",
   "success": true,
   "projectFilePath": "D:\\BridgeLabz Second batch\\AddressBookSystem\\AddressBookSystem.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Asus\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512"
+    "C:\\Users\\Asus\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
+    "C:\\Users\\Asus\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
