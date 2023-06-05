@@ -72,10 +72,5 @@ namespace AddressBookSystem
                 Console.WriteLine($"\nFirst Name:{contact.FirstName}, LastName: {contact.LastName}, Address: {contact.Address}, City:{contact.City}, State:{contact.State}, Zip:{contact.Zip}, PhoneNumber:{contact.PhoneNumber}, Email:{contact.Email}");
             }
         }
-
-        public void WriteUsingFileIO(List<Contact> contacts, string filePath)
-        {
-            
-        }
     }
 }
