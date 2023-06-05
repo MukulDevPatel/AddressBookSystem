@@ -1,0 +1,7 @@
+FirstName, LastName, Address, City, Email, PhoneNumber, State, Zip
+First Name:Jay, LastName: Kumar, Address: section A, City:Vijay Nager, State:Mp, Zip:425136, PhoneNumber:6254354813, Email:vikra@gmail.com
+First Name:Aarav, LastName: Pratt, Address: section B2, City:City5, State:UK, Zip:425125, PhoneNumber:6254354513, Email:ivan@gmail.com
+First Name:Daniel, LastName: Johson, Address: section C, City:City2, State:Brazil, Zip:426136, PhoneNumber:6254654813, Email:daniel@gmail.com
+First Name:Jaya, LastName: Sahay, Address: section D, City:City3, State:Maharashtra, Zip:424136, PhoneNumber:6254554813, Email:jaya@gmail.com
+First Name:Emma, LastName: Stone, Address: section E, City:City4, State:USA, Zip:425132, PhoneNumber:6254354823, Email:emma@gmail.com
+First Name:Harry, LastName: Stone, Address: section E, City:City4, State:USA, Zip:425132, PhoneNumber:6254354823, Email:emma@gmail.com

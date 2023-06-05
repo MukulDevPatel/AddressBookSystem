@@ -17,10 +17,5 @@ namespace AddressBookSystem
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
 
-        public override string ToString()
-        {
-            return $"First Name:{FirstName}, LastName: {LastName}, Address: {Address}, " +
-                $"City:{City}, State:{State}, Zip:{Zip}, PhoneNumber:{PhoneNumber}, Email:{Email}";
-        }
     }
 }
