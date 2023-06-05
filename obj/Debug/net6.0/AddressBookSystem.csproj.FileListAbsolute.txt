@@ -13,3 +13,5 @@ D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\refint\AddressBook
 D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.pdb
 D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.genruntimeconfig.cache
 D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\ref\AddressBookSystem.dll
+D:\BridgeLabz Second batch\AddressBookSystem\bin\Debug\net6.0\CsvHelper.dll
+D:\BridgeLabz Second batch\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.CopyComplete

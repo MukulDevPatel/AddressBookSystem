@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Welcome to Address Book program");
 
-            AddressBookMain.UseFileIO();
+            AddressBookMain.UseCSVHelper();
         }
     }
 }
